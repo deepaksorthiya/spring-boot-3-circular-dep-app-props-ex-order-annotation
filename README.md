@@ -4,7 +4,7 @@
 ## Requirements:
 
 ```
-Spring Boot : 3.3.3
+Spring Boot : 3.3.4
 Java : 17
 Maven 3.9 +
 ```
@@ -32,13 +32,16 @@ OptionNames: []
 ```
 
 ```bash
+export MY_SECRET=ENVSECRET
 mvn spring-boot:run -D"spring-boot.run.arguments=--my.secret=Test"
 mvn spring-boot:run -D"spring-boot.run.jvmArguments=-Dmy.secret=overridden"
 mvn spring-boot:run -"Dspring-boot.run.profiles=foo,bar"
+java -jar -D"my.secret=secret" .\target\spring-boot-3-circular-dep-app-props-ex-order-annotation-0.0.1-SNAPSHOT.jar
 ```
 ### Reference Documentation
 For further reference, please consider the following sections:
 
+* [YOUTUBE -JOSH Long](https://www.youtube.com/watch?v=PsNNGuLi0ns)
 * [Circular Dependency](https://www.javaguides.net/2019/01/handle-circular-dependencies-in-spring.html)
 * [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
 * [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/3.3.3/maven-plugin)
