@@ -1,5 +1,5 @@
 spring:
   application:
     name: spring-boot-3-circular-dependencies-problem-and-fixes
-my:
-  secret: "I am from app.yml classpath - ${spring.application.name}"
+#my:
+#  secret: "I am from app.yml classpath - ${spring.application.name}"

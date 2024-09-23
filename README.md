@@ -4,7 +4,7 @@
 ## Requirements:
 
 ```
-Spring Boot : 3.3.3
+Spring Boot : 3.3.4
 Java : 17
 Maven 3.9 +
 ```
@@ -35,6 +35,7 @@ OptionNames: []
 mvn spring-boot:run -D"spring-boot.run.arguments=--my.secret=Test"
 mvn spring-boot:run -D"spring-boot.run.jvmArguments=-Dmy.secret=overridden"
 mvn spring-boot:run -"Dspring-boot.run.profiles=foo,bar"
+java -jar -D"my.secret=secret" .\target\spring-boot-3-circular-dep-app-props-ex-order-annotation-0.0.1-SNAPSHOT.jar
 ```
 ### Reference Documentation
 For further reference, please consider the following sections:

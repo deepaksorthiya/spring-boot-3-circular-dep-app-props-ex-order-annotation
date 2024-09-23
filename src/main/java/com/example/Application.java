@@ -15,7 +15,7 @@ import java.util.List;
 public class Application implements ApplicationRunner {
 
     private final BeanC beanC;
-    @Value("${my.secret}")
+    @Value("${my.secret:DEFAULT_SECRET}")
     private String secret;
     private final List<Rating> ratings;
 
