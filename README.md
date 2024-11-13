@@ -1,10 +1,10 @@
-[![Build Package With Maven](https://github.com/deepaksorthiya/spring-boot-3-circular-dep-app-props-ex-order-annotation/actions/workflows/maven.yml/badge.svg)](https://github.com/deepaksorthiya/spring-boot-3-circular-dep-app-props-ex-order-annotation/actions/workflows/maven.yml)
+[![Java Maven Build Test](https://github.com/deepaksorthiya/spring-boot-3-circular-dep-app-props-ex-order-annotation/actions/workflows/maven.yml/badge.svg?branch=main)](https://github.com/deepaksorthiya/spring-boot-3-circular-dep-app-props-ex-order-annotation/actions/workflows/maven.yml)
 # Getting Started
 
 ## Requirements:
 
 ```
-Spring Boot : 3.3.4
+Spring Boot : 3.3.5
 Java : 17
 Maven 3.9 +
 ```
