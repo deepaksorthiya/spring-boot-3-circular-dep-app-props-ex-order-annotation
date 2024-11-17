@@ -36,6 +36,8 @@ export MY_SECRET=ENVSECRET
 mvn spring-boot:run -D"spring-boot.run.arguments=--my.secret=Test"
 mvn spring-boot:run -D"spring-boot.run.jvmArguments=-Dmy.secret=overridden"
 mvn spring-boot:run -"Dspring-boot.run.profiles=foo,bar"
+#multiple args
+mvn spring-boot:run -D'spring-boot.run.arguments="--server.port=9090 --spring.main.banner-mode=off"'
 java -jar -D"my.secret=secret" .\target\spring-boot-3-circular-dep-app-props-ex-order-annotation-0.0.1-SNAPSHOT.jar
 ```
 ### Reference Documentation
