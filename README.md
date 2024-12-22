@@ -45,11 +45,12 @@ java -jar -D"my.secret=secret" .\target\spring-boot-3-circular-dep-app-props-ex-
 
 ## spring properties order
 
-1. Command Line and Environment
-2. Root application.properties
-3. config/application.properties
-4. classpath application.properties
-5. classpath application.yml
+1. Command Line Java System Properties
+2. Environment Variables
+3. Root application.properties
+4. config/application.properties
+5. classpath application.properties
+6. classpath application.yml
 
 ## output
 
