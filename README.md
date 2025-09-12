@@ -5,9 +5,9 @@
 ## Requirements:
 
 ```
-Git: 2.49.0
-Spring Boot : 3.4.5
-Java : 21
+Git: 2.51.0
+Spring Boot : 3.5.5
+Java : 24
 Maven 3.9 +
 ```
 
