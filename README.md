@@ -59,12 +59,15 @@ java -D"my.secret=secret as sys prop using -D" -jar target/spring-boot-3-circula
 
 ## spring properties order
 
-1. Command Line Java System Properties
-2. Environment Variables
-3. Root application.properties
-4. config/application.properties
-5. classpath application.properties
-6. classpath application.yml
+1. Command Line Args - `--my.secret=mysecretfromcmd`
+2. Java System Properties - `-D"my.secret=secret"` should be before jar not at end
+3. Environment Variables - `export MY_SECRET=ENVSECRET`
+4. Root application.properties
+5. config/application.properties
+6. classpath application.properties
+7. classpath application.yml
+
+![Alt text](docs/spring-config-order.png?raw=true "spring config order")
 
 ## output
 
