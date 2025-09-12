@@ -27,14 +27,28 @@ cd spring-boot-3-circular-dep-app-props-ex-order-annotation
 ### Command line test
 
 ```bash
+## you can set env using
 export MY_SECRET=ENVSECRET
+# run using maven
 mvn spring-boot:run -D"spring-boot.run.arguments=--my.secret=Test"
 mvn spring-boot:run -D"spring-boot.run.jvmArguments=-Dmy.secret=overridden"
+## cmd arg take precedence over jvm args and print Test
+mvn spring-boot:run -D"spring-boot.run.arguments=--my.secret=Test" -D"spring-boot.run.jvmArguments=-Dmy.secret=overridden"
 mvn spring-boot:run -"Dspring-boot.run.profiles=foo,bar"
+
 #multiple args
 mvn spring-boot:run -D'spring-boot.run.arguments="--server.port=9090 --spring.main.banner-mode=off"'
 mvn spring-boot:run -D'spring-boot.run.jvmArguments="-Dserver.port=9090 -Dspring.main.banner-mode=off"'
+
+### run using jars 
+## here -D"my.secret=secret" is before jar file will be treat as system property
 java -jar -D"my.secret=secret" .\target\spring-boot-3-circular-dep-app-props-ex-order-annotation-0.0.1-SNAPSHOT.jar
+## using jars here -D"my.secret=secret" is after jar file will be treat as NonOptionArgs :: [-Dmy.secret=secretdadd] and value of my.secret use which is DEFAULT_SECRET
+java  -jar target/spring-boot-3-circular-dep-app-props-ex-order-annotation-0.0.1-SNAPSHOT.jar "-Dmy.secret=secret"
+## using jars here ---my.secret=mysecretfromcmd is after jar file will be treat as command line args and will take precedence over sys prop
+java -D"my.secret=secret as sys prop using -D" -jar target/spring-boot-3-circular-dep-app-props-ex-order-annotation-0.0.1-SNAPSHOT.jar --my.secret=mysecretfromcmd
+## multi value in cmd args will use both profiles
+java -D"my.secret=secret as sys prop using -D" -jar target/spring-boot-3-circular-dep-app-props-ex-order-annotation-0.0.1-SNAPSHOT.jar --spring.profiles.active=foo,bar
 ```
 
 ## Features Testing

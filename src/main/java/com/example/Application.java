@@ -39,17 +39,17 @@ public class Application implements ApplicationRunner {
 
 
     public static void main(String[] args) {
-        //System.setProperty("my.secret", "SYS_SECRET");
+        //System.setProperty("my.secret", "SYS_SECRET_FROM_MAIN_JAVA");
         SpringApplication.run(Application.class, args);
     }
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        System.out.println(secret);
+        System.out.println("My Secret :: " + secret);
         beanC.print();
-        System.out.println("Application started with command-line arguments: " + Arrays.toString(args.getSourceArgs()));
-        System.out.println("NonOptionArgs: " + args.getNonOptionArgs());
-        System.out.println("OptionNames: " + args.getOptionNames());
+        System.out.println("Application started with command-line arguments :: " + Arrays.toString(args.getSourceArgs()));
+        System.out.println("NonOptionArgs :: " + args.getNonOptionArgs());
+        System.out.println("OptionNames :: " + args.getOptionNames());
         System.out.println(ratings);
         System.out.println(simpleMap);
         System.out.println(arrayMap);
